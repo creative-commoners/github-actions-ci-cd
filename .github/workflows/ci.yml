@@ -249,9 +249,10 @@ jobs:
 
       - name: Tests - PHPUnit
         if: ${{ matrix.phpunit }}
-        run: |
-          vendor/bin/phpunit --verbose
-          echo "Passed"
+        uses: creative-commoners/github-actions-ci-cd/.github/actions/phpunit
+        # run: |
+        #   vendor/bin/phpunit --verbose
+        #   echo "Passed"
 
       - name: Tests - End to end
         if: ${{ matrix.endtoend == true }}

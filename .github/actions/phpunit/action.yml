@@ -1,0 +1,7 @@
+name: 'PHPUnit'
+description: 'Run PHPUnit test'
+runs:
+  using: "composite"
+  steps:
+    - run: vendor/bin/phpunit --verbose
+      shell: bash
